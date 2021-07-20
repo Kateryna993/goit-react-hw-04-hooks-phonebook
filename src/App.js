@@ -18,7 +18,7 @@ export default function PhoneBookApp() {
       number,
     };
 
-    contacts.find(contact => contact.name === name)
+    contacts.find(contact => contact.name === name || contact.number === number)
       ? alert(`${name} is already in contacts`)
       : setContacts(prevContacts => [contact, ...prevContacts]);
   };
